@@ -26,10 +26,11 @@
 		14461C8209C3C37F005840C0 /* pngwrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6E09C3C37F005840C0 /* pngwrite.c */; };
 		14461C8309C3C37F005840C0 /* pngwtran.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6F09C3C37F005840C0 /* pngwtran.c */; };
 		14461C8409C3C37F005840C0 /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C7009C3C37F005840C0 /* pngwutil.c */; };
-		67FA470510693F6B0078FB9E /* pngpriv.h in Headers */ = {isa = PBXBuildFile; fileRef = 67FA470410693F6B0078FB9E /* pngpriv.h */; };
+		8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14461C5D09C3C37F005840C0 /* png.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = png.c; path = ../../png.c; sourceTree = SOURCE_ROOT; };
 		14461C5E09C3C37F005840C0 /* png.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = png.h; path = ../../png.h; sourceTree = SOURCE_ROOT; };
 		14461C5F09C3C37F005840C0 /* pngconf.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pngconf.h; path = ../../pngconf.h; sourceTree = SOURCE_ROOT; };
@@ -49,7 +50,6 @@
 		14461C6E09C3C37F005840C0 /* pngwrite.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngwrite.c; path = ../../pngwrite.c; sourceTree = SOURCE_ROOT; };
 		14461C6F09C3C37F005840C0 /* pngwtran.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngwtran.c; path = ../../pngwtran.c; sourceTree = SOURCE_ROOT; };
 		14461C7009C3C37F005840C0 /* pngwutil.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngwutil.c; path = ../../pngwutil.c; sourceTree = SOURCE_ROOT; };
-		67FA470410693F6B0078FB9E /* pngpriv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pngpriv.h; path = ../../pngpriv.h; sourceTree = SOURCE_ROOT; };
 		8D07F2C70486CC7A007CD1D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D07F2C80486CC7A007CD1D0 /* libpng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libpng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				8D07F2C70486CC7A007CD1D0 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -94,7 +95,6 @@
 		08FB77ACFE841707C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				67FA470410693F6B0078FB9E /* pngpriv.h */,
 				14461C5D09C3C37F005840C0 /* png.c */,
 				14461C5E09C3C37F005840C0 /* png.h */,
 				14461C5F09C3C37F005840C0 /* pngconf.h */,
@@ -127,7 +127,6 @@
 			files = (
 				14461C7209C3C37F005840C0 /* png.h in Headers */,
 				14461C7309C3C37F005840C0 /* pngconf.h in Headers */,
-				67FA470510693F6B0078FB9E /* pngpriv.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,12 +159,12 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 4FADC24608B4156D00ABE55E /* Build configuration list for PBXProject "libpng" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.0";
 			hasScannedForEncodings = 1;
 			mainGroup = 0867D691FE84028FC02AAC07 /* libpng */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
-			projectRoot = ../..;
+			projectRoot = "";
 			targets = (
 				8D07F2BC0486CC7A007CD1D0 /* libpng */,
 			);
@@ -177,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +219,17 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4FADC24308B4156D00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -248,7 +259,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(PRODUCT_NAME).framework/$(PRODUCT_NAME)";
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "-lz";
@@ -260,69 +271,42 @@
 		4FADC24708B4156D00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-					ppc64,
-					x86_64,
-				);
-				DEPLOYMENT_POSTPROCESSING = YES;
-				GCC_ENABLE_CPP_EXCEPTIONS = NO;
-				GCC_ENABLE_CPP_RTTI = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 3.3;
+				GCC_VERSION_ppc = 4.0;
+				GCC_VERSION_x86_64 = 4.2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.2;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-				"SDKROOT[arch=i386]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				"SDKROOT[arch=ppc]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.3.9.sdk";
-				SDKROOT_i386 = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				SDKROOT_ppc = "$(DEVELOPER_SDK_DIR)/MacOSX10.3.9.sdk";
-				ZERO_LINK = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
 			};
 			name = Debug;
 		};
 		4FADC24808B4156D00ABE55E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-					ppc64,
-					x86_64,
-				);
-				GCC_ENABLE_CPP_EXCEPTIONS = NO;
-				GCC_ENABLE_CPP_RTTI = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 3.3;
+				GCC_VERSION_ppc = 4.0;
+				GCC_VERSION_x86_64 = 4.2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.2;
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-				"SDKROOT[arch=i386]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				"SDKROOT[arch=ppc]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.3.9.sdk";
-				SDKROOT_i386 = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				SDKROOT_ppc = "$(DEVELOPER_SDK_DIR)/MacOSX10.3.9.sdk";
-				ZERO_LINK = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.6.sdk;
+				SYMROOT = "$(PROJECT_DIR)/../../../Frameworks";
 			};
 			name = Release;
 		};
