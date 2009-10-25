@@ -48,7 +48,7 @@ $(libdir)/%.a: %.a
 install: $(HEADERS_INST) $(libdir)/$(LIB)
 
 clean:
-	$(RM) *.o *.a
+	$(RM) $(OBJECTS) $(LIB)
 
 distclean: clean
 
