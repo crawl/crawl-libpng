@@ -1,5 +1,12 @@
-project(PNG C)
 cmake_minimum_required(VERSION 2.4.3)
+if(UNIX AND NOT DEFINED CMAKE_BUILD_TYPE)
+   set(CMAKE_BUILD_TYPE "RelWithDebInfo" CACHE STRING "Choose the type of
+   build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug
+   Release RelWithDebInfo MinSizeRel.")
+endif()
+
+project(PNG C)
+enable_testing()
 
 # Copyright (C) 2007 Glenn Randers-Pehrson
 
@@ -9,7 +16,7 @@ cmake_minimum_required(VERSION 2.4.3)
 
 set(PNGLIB_MAJOR 1)
 set(PNGLIB_MINOR 2)
-set(PNGLIB_RELEASE 40)
+set(PNGLIB_RELEASE 41)
 set(PNGLIB_NAME libpng${PNGLIB_MAJOR}${PNGLIB_MINOR})
 set(PNGLIB_VERSION ${PNGLIB_MAJOR}.${PNGLIB_MINOR}.${PNGLIB_RELEASE})
 
@@ -109,12 +116,15 @@ set(pngtest_sources
        pngtest.c
 )
 # SOME NEEDED DEFINITIONS
+
+add_definitions(-DPNG_CONFIGURE_LIBPNG)
+
 if(MSVC)
   add_definitions(-DPNG_NO_MODULEDEF -D_CRT_SECURE_NO_DEPRECATE)
 endif(MSVC)
 
 if(PNG_SHARED OR  NOT MSVC)
-	#if building msvc static this has NOT do be defined
+	#if building msvc static this has NOT to be defined
 	add_definitions(-DZLIB_DLL)
 endif()
 
@@ -172,7 +182,7 @@ if(PNG_TESTS AND PNG_SHARED)
 # does not work with msvc due to png_lib_ver issue
  add_executable(pngtest ${pngtest_sources})
  target_link_libraries(pngtest ${PNG_LIB_NAME})
-#  add_test(pngtest ${PNG_SOURCE_DIR}/pngtest.png)
+ add_test(pngtest pngtest ${PNG_SOURCE_DIR}/pngtest.png)
 endif()
 
 
@@ -183,11 +193,11 @@ set(exec_prefix ${CMAKE_INSTALL_PREFIX})
 set(libdir      ${CMAKE_INSTALL_PREFIX}/lib)
 set(includedir  ${CMAKE_INSTALL_PREFIX}/include)
 
-configure_file(${PNG_SOURCE_DIR}/scripts/libpng.pc.in
+configure_file(${PNG_SOURCE_DIR}/scripts/libpng-pc.in
   ${PNG_BINARY_DIR}/libpng.pc)
 configure_file(${PNG_SOURCE_DIR}/scripts/libpng-config.in
   ${PNG_BINARY_DIR}/libpng-config)
-configure_file(${PNG_SOURCE_DIR}/scripts/libpng.pc.in
+configure_file(${PNG_SOURCE_DIR}/scripts/libpng-pc.in
   ${PNG_BINARY_DIR}/${PNGLIB_NAME}.pc)
 configure_file(${PNG_SOURCE_DIR}/scripts/libpng-config.in
   ${PNG_BINARY_DIR}/${PNGLIB_NAME}-config)
@@ -195,7 +205,7 @@ configure_file(${PNG_SOURCE_DIR}/scripts/libpng-config.in
 # SET UP LINKS
 if(PNG_SHARED)
   set_target_properties(${PNG_LIB_NAME} PROPERTIES
-#    VERSION 0.${PNGLIB_RELEASE}.1.2.40
+#    VERSION 0.${PNGLIB_RELEASE}.1.2.41
      VERSION 0.${PNGLIB_RELEASE}.0
      SOVERSION 0
      CLEAN_DIRECT_OUTPUT 1)
@@ -225,8 +235,12 @@ if(NOT SKIP_INSTALL_LIBRARIES AND NOT SKIP_INSTALL_ALL )
 endif()
 
 if(NOT SKIP_INSTALL_HEADERS AND NOT SKIP_INSTALL_ALL )
-install(FILES png.h pngconf.h         DESTINATION include)
-install(FILES png.h pngconf.h         DESTINATION include/${PNGLIB_NAME})
+    install(FILES png.h pngconf.h         DESTINATION include)
+    install(FILES png.h pngconf.h         DESTINATION include/${PNGLIB_NAME})
+endif()
+if(NOT SKIP_INSTALL_EXECUTABLES AND NOT SKIP_INSTALL_ALL )
+    install(PROGRAMS ${PNG_BINARY_DIR}/libpng-config      DESTINATION bin)
+    install(PROGRAMS ${PNG_BINARY_DIR}/${PNGLIB_NAME}-config DESTINATION bin)
 endif()
 if(NOT SKIP_INSTALL_FILES AND NOT SKIP_INSTALL_ALL )
     install(FILES libpng.3 libpngpf.3             DESTINATION man/man3)
