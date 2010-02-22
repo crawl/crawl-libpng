@@ -23,7 +23,7 @@ XLIB = -L/usr/X11R6/lib -lX11
 #LIBS = $(XLIB)
 LIBS = $(XLIB) -lm                      #platforms that need libm
 
-CFLAGS=-DPNG_CONFIGURE_LIBPNG -DPNG_USER_CONFIG -DNO_GZCOMPRESS -DNO_GZIP \
+CFLAGS=-DPNG_USER_CONFIG -DNO_GZCOMPRESS -DNO_GZIP \
        -DdeflateParams\(a,b,c\)=Z_OK -I. $(XINC) -O1
 
 C=.c
@@ -41,7 +41,7 @@ OBJS  = rpng2-x$(O) readpng2$(O) png$(O) pngerror$(O) pngget$(O) pngmem$(O) \
 
 # implicit make rules -------------------------------------------------------
 
-.c$(O): png.h pngconf.h readpng2.h pngusr.h zlib.h
+.c$(O): png.h pngconf.h pngpriv.h readpng2.h pngusr.h zlib.h
 	$(CC) -c $(CFLAGS) $<
 
 # dependencies

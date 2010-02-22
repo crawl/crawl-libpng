@@ -7,7 +7,7 @@ LD=$(CC)
 
 RM=rm -f
 
-CFLAGS=-DPNG_CONFIGURE_LIBPNG -DPNG_USER_CONFIG -DNO_GZIP -I. -O1
+CFLAGS=-DPNG_USER_CONFIG -DNO_GZIP -I. -O1
 
 C=.c
 O=.o
@@ -24,7 +24,7 @@ OBJS  = pnm2pngm$(O) png$(O) pngerror$(O) pngget$(O) pngmem$(O) \
 
 # implicit make rules -------------------------------------------------------
 
-.c$(O): png.h pngconf.h pngusr.h zlib.h
+.c$(O): png.h pngconf.h pngpriv.h pngusr.h zlib.h
 	$(CC) -c $(CFLAGS) $<
 
 # dependencies
