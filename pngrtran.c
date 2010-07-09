@@ -1,8 +1,8 @@
 
 /* pngrtran.c - transforms the data in a row for PNG readers
  *
- * Last changed in libpng 1.2.41 [December 3, 2009]
- * Copyright (c) 1998-2009 Glenn Randers-Pehrson
+ * Last changed in libpng 1.2.42 [January 3, 2010]
+ * Copyright (c) 1998-2010 Glenn Randers-Pehrson
  * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
  * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
  *
@@ -912,6 +912,7 @@ png_init_read_transformations(png_structp png_ptr)
         png_ptr->gamma != 0.0)
    {
       png_build_gamma_table(png_ptr);
+
 #ifdef PNG_READ_BACKGROUND_SUPPORTED
       if (png_ptr->transformations & PNG_BACKGROUND)
       {
@@ -1437,11 +1438,6 @@ png_do_read_transformations(png_structp png_ptr)
       png_do_gray_to_rgb(&(png_ptr->row_info), png_ptr->row_buf + 1);
 #endif
 
-#ifdef PNG_READ_16_TO_8_SUPPORTED
-   if (png_ptr->transformations & PNG_16_TO_8)
-      png_do_chop(&(png_ptr->row_info), png_ptr->row_buf + 1);
-#endif
-
 #ifdef PNG_READ_BACKGROUND_SUPPORTED
    if ((png_ptr->transformations & PNG_BACKGROUND) &&
       ((png_ptr->num_trans != 0 ) ||
@@ -1469,6 +1465,11 @@ png_do_read_transformations(png_structp png_ptr)
       png_do_gamma(&(png_ptr->row_info), png_ptr->row_buf + 1,
           png_ptr->gamma_table, png_ptr->gamma_16_table,
           png_ptr->gamma_shift);
+#endif
+
+#ifdef PNG_READ_16_TO_8_SUPPORTED
+   if (png_ptr->transformations & PNG_16_TO_8)
+      png_do_chop(&(png_ptr->row_info), png_ptr->row_buf + 1);
 #endif
 
 #ifdef PNG_READ_DITHER_SUPPORTED
