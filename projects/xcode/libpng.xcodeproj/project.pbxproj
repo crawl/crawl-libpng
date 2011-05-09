@@ -11,7 +11,6 @@
 		14461C7209C3C37F005840C0 /* png.h in Headers */ = {isa = PBXBuildFile; fileRef = 14461C5E09C3C37F005840C0 /* png.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14461C7309C3C37F005840C0 /* pngconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 14461C5F09C3C37F005840C0 /* pngconf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14461C7409C3C37F005840C0 /* pngerror.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6009C3C37F005840C0 /* pngerror.c */; };
-		14461C7509C3C37F005840C0 /* pnggccrd.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6109C3C37F005840C0 /* pnggccrd.c */; };
 		14461C7609C3C37F005840C0 /* pngget.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6209C3C37F005840C0 /* pngget.c */; };
 		14461C7709C3C37F005840C0 /* pngmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6309C3C37F005840C0 /* pngmem.c */; };
 		14461C7809C3C37F005840C0 /* pngpread.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6409C3C37F005840C0 /* pngpread.c */; };
@@ -21,7 +20,6 @@
 		14461C7C09C3C37F005840C0 /* pngrutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6809C3C37F005840C0 /* pngrutil.c */; };
 		14461C7D09C3C37F005840C0 /* pngset.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6909C3C37F005840C0 /* pngset.c */; };
 		14461C7F09C3C37F005840C0 /* pngtrans.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6B09C3C37F005840C0 /* pngtrans.c */; };
-		14461C8009C3C37F005840C0 /* pngvcrd.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6C09C3C37F005840C0 /* pngvcrd.c */; };
 		14461C8109C3C37F005840C0 /* pngwio.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6D09C3C37F005840C0 /* pngwio.c */; };
 		14461C8209C3C37F005840C0 /* pngwrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6E09C3C37F005840C0 /* pngwrite.c */; };
 		14461C8309C3C37F005840C0 /* pngwtran.c in Sources */ = {isa = PBXBuildFile; fileRef = 14461C6F09C3C37F005840C0 /* pngwtran.c */; };
@@ -35,7 +33,6 @@
 		14461C5E09C3C37F005840C0 /* png.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = png.h; path = ../../png.h; sourceTree = SOURCE_ROOT; };
 		14461C5F09C3C37F005840C0 /* pngconf.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pngconf.h; path = ../../pngconf.h; sourceTree = SOURCE_ROOT; };
 		14461C6009C3C37F005840C0 /* pngerror.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngerror.c; path = ../../pngerror.c; sourceTree = SOURCE_ROOT; };
-		14461C6109C3C37F005840C0 /* pnggccrd.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pnggccrd.c; path = ../../pnggccrd.c; sourceTree = SOURCE_ROOT; };
 		14461C6209C3C37F005840C0 /* pngget.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngget.c; path = ../../pngget.c; sourceTree = SOURCE_ROOT; };
 		14461C6309C3C37F005840C0 /* pngmem.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngmem.c; path = ../../pngmem.c; sourceTree = SOURCE_ROOT; };
 		14461C6409C3C37F005840C0 /* pngpread.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngpread.c; path = ../../pngpread.c; sourceTree = SOURCE_ROOT; };
@@ -45,7 +42,6 @@
 		14461C6809C3C37F005840C0 /* pngrutil.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngrutil.c; path = ../../pngrutil.c; sourceTree = SOURCE_ROOT; };
 		14461C6909C3C37F005840C0 /* pngset.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngset.c; path = ../../pngset.c; sourceTree = SOURCE_ROOT; };
 		14461C6B09C3C37F005840C0 /* pngtrans.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngtrans.c; path = ../../pngtrans.c; sourceTree = SOURCE_ROOT; };
-		14461C6C09C3C37F005840C0 /* pngvcrd.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngvcrd.c; path = ../../pngvcrd.c; sourceTree = SOURCE_ROOT; };
 		14461C6D09C3C37F005840C0 /* pngwio.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngwio.c; path = ../../pngwio.c; sourceTree = SOURCE_ROOT; };
 		14461C6E09C3C37F005840C0 /* pngwrite.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngwrite.c; path = ../../pngwrite.c; sourceTree = SOURCE_ROOT; };
 		14461C6F09C3C37F005840C0 /* pngwtran.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = pngwtran.c; path = ../../pngwtran.c; sourceTree = SOURCE_ROOT; };
@@ -99,7 +95,6 @@
 				14461C5E09C3C37F005840C0 /* png.h */,
 				14461C5F09C3C37F005840C0 /* pngconf.h */,
 				14461C6009C3C37F005840C0 /* pngerror.c */,
-				14461C6109C3C37F005840C0 /* pnggccrd.c */,
 				14461C6209C3C37F005840C0 /* pngget.c */,
 				14461C6309C3C37F005840C0 /* pngmem.c */,
 				14461C6409C3C37F005840C0 /* pngpread.c */,
@@ -109,7 +104,6 @@
 				14461C6809C3C37F005840C0 /* pngrutil.c */,
 				14461C6909C3C37F005840C0 /* pngset.c */,
 				14461C6B09C3C37F005840C0 /* pngtrans.c */,
-				14461C6C09C3C37F005840C0 /* pngvcrd.c */,
 				14461C6D09C3C37F005840C0 /* pngwio.c */,
 				14461C6E09C3C37F005840C0 /* pngwrite.c */,
 				14461C6F09C3C37F005840C0 /* pngwtran.c */,
@@ -160,7 +154,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 4FADC24608B4156D00ABE55E /* Build configuration list for PBXProject "libpng" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* libpng */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
@@ -199,7 +200,6 @@
 			files = (
 				14461C7109C3C37F005840C0 /* png.c in Sources */,
 				14461C7409C3C37F005840C0 /* pngerror.c in Sources */,
-				14461C7509C3C37F005840C0 /* pnggccrd.c in Sources */,
 				14461C7609C3C37F005840C0 /* pngget.c in Sources */,
 				14461C7709C3C37F005840C0 /* pngmem.c in Sources */,
 				14461C7809C3C37F005840C0 /* pngpread.c in Sources */,
@@ -209,7 +209,6 @@
 				14461C7C09C3C37F005840C0 /* pngrutil.c in Sources */,
 				14461C7D09C3C37F005840C0 /* pngset.c in Sources */,
 				14461C7F09C3C37F005840C0 /* pngtrans.c in Sources */,
-				14461C8009C3C37F005840C0 /* pngvcrd.c in Sources */,
 				14461C8109C3C37F005840C0 /* pngwio.c in Sources */,
 				14461C8209C3C37F005840C0 /* pngwrite.c in Sources */,
 				14461C8309C3C37F005840C0 /* pngwtran.c in Sources */,
