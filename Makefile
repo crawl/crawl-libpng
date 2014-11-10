@@ -20,7 +20,7 @@ prefix ?= /usr/local
 libdir := $(prefix)/lib
 includedir := $(prefix)/include
 
-HEADERS = png.h pngconf.h
+HEADERS = png.h pngconf.h pnglibconf.h
 SOURCES = png.c pngset.c pngget.c pngrutil.c pngtrans.c pngwutil.c \
     pngread.c pngrio.c pngwio.c pngwrite.c pngrtran.c \
     pngwtran.c pngmem.c pngerror.c pngpread.c
